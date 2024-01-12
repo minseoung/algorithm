@@ -3,6 +3,7 @@ package question.array.q21;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class Main {
     /**
@@ -21,20 +22,7 @@ public class Main {
             arr[i] = Integer.parseInt(split[i]);
         }
 
-        for (int i = 0; i < arr.length; i++) {
-            if (i == arr.length - 1) {
-                break;
-            }
-            for (int j = i; j >= 0; j--) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp;
-                    temp = arr[j+1];
-                    arr[j+1] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-        }
-        System.out.print(arr[0] + " ");
-        System.out.println(arr[arr.length-1]);
+        Arrays.sort(arr);
+        System.out.println(arr[0] + " " + arr[arr.length-1]);
     }
 }
