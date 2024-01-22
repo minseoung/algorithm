@@ -1,12 +1,13 @@
+package question.deepen.q1316;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
-public class Main{
+public class Main {
+
     public static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-    public static void main(String[] args) throws IOException {
-
+    public static void main(String[] args) throws IOException{
         int N = Integer.parseInt(bufferedReader.readLine());
         int count = 0;
         for(int i = 0; i < N; i++){
@@ -16,9 +17,8 @@ public class Main{
         }
         System.out.println(count);
     }
-
     //해당 단어가 그룹단어인지 확인하는 함수
-    public static boolean check() throws IOException {
+    public static boolean check() throws IOException{
         boolean[] check = new boolean['z' - 'a' + 1];
         char prev = 0;
 
@@ -40,4 +40,5 @@ public class Main{
         }
         return true;
     }
+
 }

@@ -15,6 +15,7 @@ public class q1157 {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String read = bufferedReader.readLine();
+
         String upRead = read.toUpperCase();
 
         int[] arr1 = new int['Z' - 'A' + 1];
