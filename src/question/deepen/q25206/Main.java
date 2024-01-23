@@ -1,10 +1,11 @@
+package question.deepen.q25206;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
-public class Main{
-    public static void main(String[] args) throws IOException {
+public class Main {
+    public static void main(String[] args)throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         Double[] scoreDoub = {4.0, 3.0, 2.0, 1.0};
         double sum = 0.0; //과목별 학점 x 과목평점의 합
@@ -22,17 +23,12 @@ public class Main{
 
             if(scoreStr.contains("0")){
                 sum += credit * scoreDoub[scoreStr.charAt(0) - 'A'];
-                System.out.println(credit * scoreDoub[scoreStr.charAt(0) - 'A']);
             } else if(scoreStr.contains("+")){
                 sum += credit * (scoreDoub[scoreStr.charAt(0) - 'A'] + 0.5);
-                System.out.println(credit * (scoreDoub[scoreStr.charAt(0) - 'A'] + 0.5));
             } else if(scoreStr.contains("P")){
                 sumCredit -= credit;
             }
         }
-        System.out.println(sum);
-        System.out.println(sumCredit);
         System.out.println(sum/sumCredit);
-        System.out.println(sum/sumCredit + sum%sumCredit);
     }
 }
