@@ -34,5 +34,6 @@ public class Main{
         System.out.println(sumCredit);
         System.out.println(sum/sumCredit);
         System.out.println(sum/sumCredit + sum%sumCredit);
+
     }
 }
